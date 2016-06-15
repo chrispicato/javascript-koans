@@ -96,7 +96,7 @@ describe("About Applying What We Have Learnt", function() {
       })
       .flatten()
       .reduce( function (emptyArg , ingredient) {
-        ingredientCount[ingredient] = (ingredientCount[ingredient] | 0) + 1;
+        ingredientCount[ingredient] = (ingredientCount[ingredient] || 0) + 1;
       });
 
     expect(ingredientCount['mushrooms']).toBe(2);
